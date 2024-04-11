@@ -77,8 +77,17 @@ class _AnimalListPageState extends State<AnimalListPage> {
     'images/animal5.png'
   ];
 
+  List<String> animal6 = [
+    'モンハナシャコ',
+    'シャコの仲間でははでな色彩で、尾扇（びせん）のふち取りの色は深紅。自分の巣穴を持ち昼間はあまり遠出をしないが、泳ぐスピードはかなり速い。エビのはさみに相当する捕脚（ほきゃく）には数本のとげがあり、この部分を使っての強力なパンチは貝がらをも砕くほどだ。夜間に歩き回ってえものを見つけて一撃でしとめる。肉食性でカニやヤドカリもつかまえて食べる。',
+    '無脊椎動物',
+    '太平洋・大西洋・インド洋',
+    '150mm',
+    'images/animal6.png'
+  ];
+
   //ここでanimals配列を定義
-  late List<List<String>> animals = [animal1, animal2, animal3, animal4, animal5];
+  late List<List<String>> animals = [animal1, animal2, animal3, animal4, animal5, animal6];
 
   @override
   Widget build(BuildContext context) {
