@@ -1,16 +1,17 @@
-# animal_cards
+## このアプリは何？
 
-A new Flutter project.
+動物を写真と一緒に紹介しているモバイルアプリです。
 
-## Getting Started
+yahoo!キッズ動物図鑑の情報をお借りして、flutter 学習のため個人利用しています。
 
-This project is a starting point for a Flutter application.
+## どこでアプリが見れる？
 
-A few resources to get you started if this is your first Flutter project:
+Web サーバーには上げていません。
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+以下の手順でローカルにて確認できます。
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Android Studio や VSCode を flutter 開発のためにセットアップ
+- このリポジトリをクローン
+- エミュレータ、シミュレータを立ち上げ確認
+
+環境構築の参考資料：https://docs.flutter.dev/get-started/install
