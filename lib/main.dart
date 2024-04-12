@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const AnimalListPage(title: '動物図鑑'),
       home: DefaultTabController(
-        length: 3,
+        length: 2,
         child: Scaffold(
           appBar: AppBar(
             bottom: TabBar(
@@ -231,33 +231,35 @@ class PlantDetailPage extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            Image.asset(plant['image']),
-            SizedBox(height:18),// 画像
-            const Text('説明', style:TextStyle(fontWeight: FontWeight.bold)),
-            Text(plant['description']), // 説明
-            SizedBox(height:18),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                      children:[
-                        Icon(Icons.book, color:Colors.green),
-                        const Text('花の咲く季節', style: TextStyle(fontSize:16)),
-                        Text(plant['type'])
-                      ]
-                  ),
-                  Column(
-                      children:[
-                        Icon(Icons.height, color:Colors.green),
-                        const Text('全長', style:TextStyle(fontSize:16)),
-                        Text(plant['size']),
-                      ]
-                  )
-                ]
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.asset(plant['image']),
+              SizedBox(height:18),// 画像
+              const Text('説明', style:TextStyle(fontWeight: FontWeight.bold)),
+              Text(plant['description']), // 説明
+              SizedBox(height:18),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                        children:[
+                          Icon(Icons.book, color:Colors.green),
+                          const Text('花の咲く季節', style: TextStyle(fontSize:16)),
+                          Text(plant['season'])
+                        ]
+                    ),
+                    Column(
+                        children:[
+                          Icon(Icons.height, color:Colors.green),
+                          const Text('全長', style:TextStyle(fontSize:16)),
+                          Text(plant['size']),
+                        ]
+                    )
+                  ]
+              )
+            ],
+          ),
         ),
       ),
     );
