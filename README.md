@@ -2,7 +2,8 @@
 
 動物を写真と一緒に紹介しているモバイルアプリです。
 
-yahoo!キッズ動物図鑑の情報をお借りして、flutter 学習のため個人利用しています。
+yahoo!キッズ動物図鑑 https://kids.yahoo.co.jp/zukan/animal/
+の情報をお借りして、flutter 学習のため個人利用しています。
 
 <img src="https://github.com/kakimotos/animal_cards/assets/91932952/96bfbf40-cc71-4006-af56-6516a9ca0cfa" width="50%">
 
