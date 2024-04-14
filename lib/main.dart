@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'data/animals_data.dart';
 import 'data/plants_data.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            bottom: TabBar(
+            bottom: const TabBar(
               tabs:[
                 Tab(icon: Icon(Icons.pets)),
                 Tab(icon: Icon(Icons.local_florist)),
@@ -33,7 +31,7 @@ class MyApp extends StatelessWidget {
             ),
             title: const Text('いきもの図鑑'),
           ),
-          body: TabBarView(
+          body: const TabBarView(
             children: [
               AnimalListPage(),
               PlantListPage(),
@@ -190,21 +188,21 @@ class AnimalDetailPage extends StatelessWidget {
                 children: [
                   Column(
                       children:[
-                        Icon(Icons.book, color:Colors.green),
+                        const Icon(Icons.book, color:Colors.green),
                         const Text('分類', style: TextStyle(fontSize:16)),
                         Text(animal['type'])
                       ]
                   ),
                   Column(
                       children:[
-                        Icon(Icons.map, color:Colors.green),
+                        const Icon(Icons.map, color:Colors.green),
                         const Text('生息地', style:TextStyle(fontSize:16)),
                         Text(animal['origin']),
                       ]
                   ),
                   Column(
                       children:[
-                        Icon(Icons.height, color:Colors.green),
+                        const Icon(Icons.height, color:Colors.green),
                         const Text('全長', style:TextStyle(fontSize:16)),
                         Text(animal['size']),
                       ]
@@ -235,23 +233,23 @@ class PlantDetailPage extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(plant['image']),
-              SizedBox(height:18),// 画像
+              const SizedBox(height:18),// 画像
               const Text('説明', style:TextStyle(fontWeight: FontWeight.bold)),
               Text(plant['description']), // 説明
-              SizedBox(height:18),
+              const SizedBox(height:18),
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Column(
                         children:[
-                          Icon(Icons.book, color:Colors.green),
+                          const Icon(Icons.book, color:Colors.green),
                           const Text('花の咲く季節', style: TextStyle(fontSize:16)),
                           Text(plant['season'])
                         ]
                     ),
                     Column(
                         children:[
-                          Icon(Icons.height, color:Colors.green),
+                          const Icon(Icons.height, color:Colors.green),
                           const Text('全長', style:TextStyle(fontSize:16)),
                           Text(plant['size']),
                         ]
