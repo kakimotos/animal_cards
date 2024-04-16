@@ -93,16 +93,33 @@ class _AnimalListPageState extends State<AnimalListPage> {
           ),
         );
       },
-      child: Column(
-          children: [
-            Image.asset(animal['image']),
-            Text(animal['name']),
-            Text(
-              animal['description'],
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-            )
-          ]
+      child: Card(
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+                child: Image.asset(
+                  animal['image'],
+                  fit: BoxFit.cover,
+                  height: 120,
+                ),
+              ),
+              // Image.asset(animal['image']),
+              Text(animal['name']),
+              Text(
+                animal['description'],
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              )
+            ]
+        ),
       ),
     );
   }
@@ -119,7 +136,7 @@ class _PlantListPageState extends State<PlantListPage> {
             mainAxisSpacing: 8,
             crossAxisSpacing:16,
             crossAxisCount: 2,
-            childAspectRatio: 0.55,
+            childAspectRatio: 0.8,
 
           ),
           scrollDirection: Axis.vertical,
@@ -145,16 +162,30 @@ class _PlantListPageState extends State<PlantListPage> {
           ),
         );
       },
-      child: Column(
-          children: [
-            Image.asset(plant['image']),
-            Text(plant['name']),
-            Text(
-              plant['description'],
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-            )
-          ]
+      child: Card(
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+              children: [
+                ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                    ),
+                    child: Image.asset(plant['image'])
+                ),
+                Text(plant['name']),
+                Text(
+                  plant['description'],
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                )
+              ]
+          ),
+        ),
       ),
     );
   }
@@ -179,10 +210,10 @@ class AnimalDetailPage extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(animal['image']),
-            SizedBox(height:18),// 画像
+            const SizedBox(height:18),// 画像
             const Text('説明', style:TextStyle(fontWeight: FontWeight.bold)),
             Text(animal['description']), // 説明
-            SizedBox(height:18),
+            const SizedBox(height:18),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
